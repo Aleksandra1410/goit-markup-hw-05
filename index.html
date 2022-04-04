@@ -28,7 +28,7 @@
          <a class="header-link" href="webstudio"><span class="header-link-txt">Web</span>Studio</a>
           <nav class="nav">
                <ul class="nav-list"> 
-                   <li class="nav-item" ><a class="nav-link" href="#">Cтудия</a></li>
+                   <li class="nav-item" ><a class="nav-link current" href="#">Cтудия</a></li>
                    <li class="nav-item" ><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
                    <li class="nav-item" ><a class="nav-link" href="#">Контакты</a></li>
                </ul>
@@ -57,10 +57,9 @@
           <section class="efectdecision" >
               <div class="container-decision">
               <h1 class="efectdecision-title" >ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                 <button class="efectdecision-button" type="button">Заказать услугу</button>
+                 <button class="efectdecision-button" type="button" data-modal-open>Заказать услугу</button>
                 </div>     
           </section>
-
           <!--Качества-->
           <section class="quality">
               <div class="container-quality">
@@ -109,9 +108,31 @@
             <div class="container-whatwedo">
                <h2 class="secondtitle">Чем мы занимаемся</h2>
                   <ul class="whatwedo-list">
-                       <li class="whatwedo-item"><img class="whatwedo-image" src="./images/box 1.jpg" alt="технології1" width="370" height="294"></li> 
-                       <li class="whatwedo-item"><img class="whatwedo-image" src="./images/box2.jpg" alt="технології2" width="370" height="294"></li> 
-                       <li class="whatwedo-item"><img class="whatwedo-image" src="./images/box3.jpg" alt="технології3" width="370" height="294"></li> 
+                       <li class="whatwedo-item">
+                           <div class="position-img">
+                           <img class="whatwedo-image" src="./images/box 1.jpg" alt="технології1" width="370" height="294">
+                           <!--Позиціонування-->
+                           <div class="position-actions">
+                               <p class="position-text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                           </div>
+                           </div>
+                    </li> 
+                       <li class="whatwedo-item">
+                           <div class="position-img">
+                           <img class="whatwedo-image" src="./images/box2.jpg" alt="технології2" width="370" height="294">
+                           <div class="position-actions">
+                               <p class="position-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                           </div>
+                           </div>
+                    </li> 
+                       <li class="whatwedo-item">
+                           <div class="position-img">
+                           <img class="whatwedo-image" src="./images/box3.jpg" alt="технології3" width="370" height="294">
+                           <div class="position-actions">
+                               <p class="position-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                           </div>
+                           </div>
+                    </li> 
                   </ul>
             </div>     
           </section>       
@@ -370,5 +391,16 @@
             </div>
           </div>    
       </footer>
+      <!--Модальне вікно для для кнопки Заказать услугу-->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal" >
+       <p>
+           Lorem ipsum
+       </p>
+       <button  class="modal-btn" data-modal-close type="button">x</button>
+    </div>
+       </div>
+      <!--подключение jS-->
+      <script src="./js/modal.js"></script>
 </body>
 </html>
