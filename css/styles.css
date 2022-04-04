@@ -947,3 +947,8 @@ padding-bottom: 27px;
     cursor: pointer;
     background-color: var(--white-text);
 }
+.modal-btn:hover {
+    background-color: var(--white-text);
+    color:black;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
