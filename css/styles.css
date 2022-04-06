@@ -14,6 +14,8 @@ font-family: 'Roboto', sans-serif;
     --accent-color: #2196F3;
     --color-text: #757575;
     --white-text: #ffffff;
+    /* анімація */
+    --animation:cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 body {
     font-family:var(--main-font);
@@ -48,6 +50,7 @@ body {
 .nav-link:focus
 .nav-link {
 color: var(--accent-color);
+transition: transform 250ms var(--animation);
 }
 /* header contacts*/
 .header-contacts {
@@ -70,9 +73,11 @@ a {
 }
 .header-mail:hover, :focus {
 color: var(--accent-color);
+transition: transform 250ms var(--animation);
 }
 .header-phone:hover,:focus {
     color: var(--accent-color);
+    transition: transform 250ms var(--animation);
 }
 /* efectdecision */
 .efectdecision {
@@ -273,10 +278,13 @@ background-color: #F5F4FA;
 button:hover {
     background-color:var(--accent-color);
     color: var(--white-text);
+    transition: transform 250ms var(--animation);
+
 }
 .button:focus {
     background-color:var(--accent-color);
     color: var(--white-text);
+    transition: transform 250ms var(--animation);
 }
 .button {
     cursor:pointer;
@@ -661,6 +669,7 @@ padding: 6px 22px;
 }
 .clients-list {
     border: 1px solid #AFB1B8 ;
+    border-radius: 4px;
 } 
 .clients-icon {
     fill: #AFB1B8;
@@ -670,11 +679,13 @@ padding: 6px 22px;
  .clients-list:hover,
 .clients-list:focus {
     border: 1px solid var(--accent-color);
+    transition: transform 250ms var(--animation);
 }
 
 .clients-list:hover .clients-icon,
 .clients-list:focus .clients-icon {
     fill: var(--accent-color);
+    transition: transform 250ms var(--animation);
 }
       /*icons with hover our team  */
 .comand-general {
@@ -696,11 +707,13 @@ padding: 6px 22px;
 }
 .icon-comandlist:hover .comand-icon,
 .icon-comandlist:focus .comand-icon {
-    fill: #ffffff;           
+    fill: #ffffff;
+    transition: transform 250ms var(--animation);       
 }
 .icon-comandlist:hover,
 .icon-comandlist:focus {
     background-color: #2196F3;
+    transition: transform 250ms var(--animation);
 }
 .icon-comandlist {
     fill: #AFB1B8;
@@ -716,6 +729,7 @@ padding: 6px 22px;
 }
 .comand-item {
     box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 4px;
 }
  
        /*icon with hover footer  */
@@ -758,6 +772,7 @@ padding: 6px 22px;
     }
 .icon-footerlist:hover,
 .icon-footerlist:focus {background-color: var(--accent-color);
+    transition: transform 250ms var(--animation);
 } 
    .icon-footeritem:not(:last-child)  {
        margin-right:10px;
@@ -771,7 +786,9 @@ padding: 6px 22px;
    .icon-infooter:focus 
    {
        background-color:#2196F3;
-       fill: #ffffff;}
+       fill: #ffffff;
+       transition: transform 250ms var(--animation);
+    }
  
            
           /* icons quality without hover */
@@ -779,7 +796,6 @@ padding: 6px 22px;
     width: 270px;
     height: 120px;
     background-color: #f5f4fa;
-    border-radius: 4px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -794,10 +810,12 @@ padding: 6px 22px;
 .header-phone:hover .icon-tel,
 .header-phone:focus .icon-tel {
     fill: var(--accent-color);
+    transition: transform 250ms var(--animation);
 }
 .header-mail:hover .icon-mail,
 .header-mail:focus .icon-mail {
     fill: var(--accent-color);
+    transition: transform 250ms var(--animation);
 }
 
 /* тінь при натисканні карточки на портфоліо */
@@ -810,6 +828,7 @@ img {
 .main-item:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: transform 250ms var(--animation);
 } 
 /* Позиціонування */
 .container-whatwedo {
@@ -855,24 +874,6 @@ padding-bottom: 27px;
 
 .nav-link {
     position: relative;
-}
-.current::after,
-.nav-link::after,
-.nav-link::after{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #2196F3;
-    transform: scale(0);
-    opacity: 1;
-    border: 2px var(--accent-color);
-    transition: color ;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    opacity cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current:hover::after {
     transform: scale(1);
@@ -944,6 +945,7 @@ padding-bottom: 27px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 250ms var(--animation);
     width: 528px;
     height: 581px;
     background-color:var(--white-text);
@@ -956,9 +958,11 @@ padding-bottom: 27px;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--white-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .modal-btn:hover {
     background-color: var(--white-text);
     color:black;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 250ms var(--animation);
 }
