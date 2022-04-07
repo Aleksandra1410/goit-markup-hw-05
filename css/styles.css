@@ -46,11 +46,13 @@ body {
     letter-spacing: 0.02em;
     color: var(--primary-color) ;
 }
+.nav-link {
+    transition: color 250ms var(--animation);
+}
 .nav-link:hover,
 .nav-link:focus
 .nav-link {
 color: var(--accent-color);
-transition: transform 250ms var(--animation);
 }
 /* header contacts*/
 .header-contacts {
@@ -63,9 +65,11 @@ transition: transform 250ms var(--animation);
 }
 .header-mail {
     color: var(--color-text);
+    transition: color 250ms var(--animation);
 }
 .header-phone {
     color: var(--color-text);
+    transition: color 250ms var(--animation);
 }
 
 a {
@@ -73,11 +77,9 @@ a {
 }
 .header-mail:hover, :focus {
 color: var(--accent-color);
-transition: transform 250ms var(--animation);
 }
 .header-phone:hover,:focus {
     color: var(--accent-color);
-    transition: transform 250ms var(--animation);
 }
 /* efectdecision */
 .efectdecision {
@@ -278,16 +280,14 @@ background-color: #F5F4FA;
 button:hover {
     background-color:var(--accent-color);
     color: var(--white-text);
-    transition: transform 250ms var(--animation);
-
 }
 .button:focus {
     background-color:var(--accent-color);
     color: var(--white-text);
-    transition: transform 250ms var(--animation);
 }
 .button {
     cursor:pointer;
+    transition: color 250ms var(--animation), background-color 250ms var(--animation);
 }
 .main-title {
 font-family: var(--main-font);
@@ -670,22 +670,22 @@ padding: 6px 22px;
 .clients-list {
     border: 1px solid #AFB1B8 ;
     border-radius: 4px;
+    transition: fill 250ms var(--animation), border 250ms var(--animation);
 } 
 .clients-icon {
     fill: #AFB1B8;
     background-position: center;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    transition: fill 250ms var(--animation);
 } 
  .clients-list:hover,
 .clients-list:focus {
     border: 1px solid var(--accent-color);
-    transition: transform 250ms var(--animation);
 }
 
 .clients-list:hover .clients-icon,
 .clients-list:focus .clients-icon {
     fill: var(--accent-color);
-    transition: transform 250ms var(--animation);
 }
       /*icons with hover our team  */
 .comand-general {
@@ -697,6 +697,9 @@ padding: 6px 22px;
         padding-left: 0px;
         justify-content: center;
 }
+.comand-icon {
+    transition: fill 250ms var(--animation);
+}
 .icon-comandlist {
     display: flex;
     justify-content: center;
@@ -704,16 +707,15 @@ padding: 6px 22px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: background-color 250ms var(--animation), fill 250ms var(--animation);
 }
 .icon-comandlist:hover .comand-icon,
 .icon-comandlist:focus .comand-icon {
-    fill: #ffffff;
-    transition: transform 250ms var(--animation);       
+    fill: #ffffff;       
 }
 .icon-comandlist:hover,
 .icon-comandlist:focus {
     background-color: #2196F3;
-    transition: transform 250ms var(--animation);
 }
 .icon-comandlist {
     fill: #AFB1B8;
@@ -769,11 +771,11 @@ padding: 6px 22px;
     background-color: rgb(255, 255, 255, 10%);
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color 250ms var(--animation);
     }
 .icon-footerlist:hover,
 .icon-footerlist:focus {background-color: var(--accent-color);
-    transition: transform 250ms var(--animation);
-} 
+}
    .icon-footeritem:not(:last-child)  {
        margin-right:10px;
    }
@@ -781,13 +783,13 @@ padding: 6px 22px;
        fill: var(--white-text);
        background-position: center;
        background-repeat: no-repeat;
+       transition: background-color 250ms var(--animation), fill 250ms var(--animation);
    }
    .icon-infooter:hover,
    .icon-infooter:focus 
    {
        background-color:#2196F3;
        fill: #ffffff;
-       transition: transform 250ms var(--animation);
     }
  
            
@@ -807,15 +809,18 @@ padding: 6px 22px;
     margin-right: 10px;
     fill: #757575;
 }
+.header-phone .icon-tel,
+.header-mail .icon-mail {
+    transition: fill 250ms var(--animation);
+}
 .header-phone:hover .icon-tel,
 .header-phone:focus .icon-tel {
     fill: var(--accent-color);
-    transition: transform 250ms var(--animation);
 }
 .header-mail:hover .icon-mail,
 .header-mail:focus .icon-mail {
     fill: var(--accent-color);
-    transition: transform 250ms var(--animation);
+
 }
 
 /* тінь при натисканні карточки на портфоліо */
@@ -824,11 +829,13 @@ img {
     max-width: 100%;
     height: auto;
   }
+ .main-item {
+    transition: box-shadow 250ms var(--animation);
+ } 
 .main-item:hover, 
 .main-item:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: transform 250ms var(--animation);
 } 
 /* Позиціонування */
 .container-whatwedo {
@@ -874,6 +881,9 @@ padding-bottom: 27px;
 
 .nav-link {
     position: relative;
+}
+.current {
+    transition: transform 250ms var(--animation), opacity 250ms var(--animation);;
 }
 .current:hover::after {
     transform: scale(1);
@@ -964,5 +974,5 @@ padding-bottom: 27px;
     background-color: var(--white-text);
     color:black;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 250ms var(--animation);
+    transition: transform 250ms var(--animation), background-color 250ms var(--animation);
 }
